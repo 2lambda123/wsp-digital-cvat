@@ -1,12 +1,9 @@
-// Copyright (C) 2020 Intel Corporation
+// Copyright (C) 2020-2021 Intel Corporation
 //
 // SPDX-License-Identifier: MIT
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const DtsBundleWebpack = require('dts-bundle-webpack');
 
 const nodeConfig = {
     target: 'node',
@@ -56,13 +53,6 @@ const nodeConfig = {
             },
         ],
     },
-    plugins: [
-        new DtsBundleWebpack({
-            name: 'cvat-canvas.node',
-            main: 'dist/declaration/src/typescript/canvas.d.ts',
-            out: '../cvat-canvas.node.d.ts',
-        }),
-    ],
 };
 
 const webConfig = {
@@ -126,13 +116,6 @@ const webConfig = {
             },
         ],
     },
-    plugins: [
-        new DtsBundleWebpack({
-            name: 'cvat-canvas',
-            main: 'dist/declaration/src/typescript/canvas.d.ts',
-            out: '../cvat-canvas.d.ts',
-        }),
-    ],
 };
 
 module.exports = [webConfig, nodeConfig];

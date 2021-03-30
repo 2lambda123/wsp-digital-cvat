@@ -28,7 +28,6 @@
     "@typescript-eslint/parser": "^1.13.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
-    "dts-bundle-webpack": "^1.0.2",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-typescript": "^4.0.1",
     "eslint-config-typescript-recommended": "^1.4.17",
@@ -41,7 +40,7 @@
     "style-loader": "^1.0.0",
     "typescript": "^3.5.3",
     "webpack": "^5.20.2",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
