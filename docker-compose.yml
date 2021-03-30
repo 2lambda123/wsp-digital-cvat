@@ -37,6 +37,9 @@ services:
     depends_on:
       - cvat_redis
       - cvat_db
+    networks:
+        - academy-net
+        - default
     environment:
       DJANGO_MODWSGI_EXTRA_ARGS: ''
       ALLOWED_HOSTS: '*'
@@ -80,6 +83,8 @@ networks:
       driver: default
       config:
         - subnet: 172.28.0.0/24
+  academy-net:
+      driver: bridge
 
 volumes:
   cvat_db:
